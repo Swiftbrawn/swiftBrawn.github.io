@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Animation 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+            background-color: black;
+
+        }
+
+        .shake {
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            background-color: aqua;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            15% {
+                transform: perspective(-15deg);
+            }
+
+            30% {
+                transform: rotate(15deg);
+            }
+
+            45% {
+                transform: rotate(-10deg);
+            }
+
+            60% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shake"></div>
+</body>
+
+</html>

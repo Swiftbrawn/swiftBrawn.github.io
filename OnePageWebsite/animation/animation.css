@@ -1,0 +1,27 @@
+.ball {
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: balloon 4s 5 3s ease-in-out;
+}
+
+@keyframes balloon {
+    0% {
+        top: 0;
+        background-color: red;
+    }
+
+
+50% {
+    top: 500px;
+    background-color: blue;
+    /* background-image: url(/Assets/IMG/shape-top-grey-80.png); */
+}
+
+
+100% {
+    top: 0;
+}
+}

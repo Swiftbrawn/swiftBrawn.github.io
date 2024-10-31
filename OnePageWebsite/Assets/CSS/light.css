@@ -1,0 +1,18 @@
+body {
+    background-color: white;
+    color: black;
+
+}
+.moon{
+    font-size: 15px;
+    color: white;
+    margin-right: 5px;
+    visibility: hidden;
+}
+
+.sun{
+
+    font-size: 15px;
+    color: yellow;
+    margin-left: 5px;
+}
