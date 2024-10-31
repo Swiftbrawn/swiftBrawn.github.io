@@ -6,72 +6,119 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css"> 
     <style type="text/css">
-        /* styles.css */
+        /* Main styles */
         body {
-            font-family: 'Courier New', Courier, monospace; /* Typewriter font */
-            background-color: #f5f5f5; /* Background color */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f5f5;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height */
-            margin: 0; /* Remove default margin */
+            min-height: 100vh;
+            margin: 0;
         }
 
         .grid-container {
-            display: grid; /* Enable grid layout */
-            grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
-            gap: 20px; /* Space between grid items */
-            padding: 20px; /* Padding around the grid */
-            width: 100%; /* Full width of the container */
-            max-width: 1200px; /* Maximum width for better layout */
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .grid-item {
-            background-color: purple; /* Background color */
-            color: white; /* Text color */
-            padding: 20px; /* Padding inside the boxes */
-            text-align: center; /* Center text */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
-            transition: transform 0.3s; /* Smooth hover effect */
+            background-color: purple;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
         }
 
         .grid-item:hover {
-            transform: scale(1.05); /* Scale effect on hover */
+            transform: scale(1.05);
         }
 
         .typewriter h1 {
-            border-right: 4px solid black; /* Cursor effect */
-            white-space: nowrap; /* Prevent line break */
-            overflow: hidden; /* Hide overflow text */
-            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
+            border-right: 4px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
         }
 
-        /* Keyframes for typing effect */
         @keyframes typing {
-            from {
-                width: 0; /* Start with no width */
-            }
-            to {
-                width: 100%; /* End with full width */
-            }
+            from { width: 0; }
+            to { width: 100%; }
         }
 
-        /* Keyframes for caret blink effect */
         @keyframes blink-caret {
-            from, to {
-                border-color: transparent; /* Invisible caret */
-            }
-            50% {
-                border-color: black; /* Visible caret */
-            }
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
         }
 
         p {
-            text-align: center; /* Center text */
-            font-size: 35px; /* Font size for paragraph */
-            margin: 20px 0; /* Margin for spacing */
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        /* Responsive layout for all mobile devices */
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .grid-item {
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 20px;
+                margin: 15px 0;
+            }
+
+            .typewriter h1 {
+                font-size: 20px;
+            }
+        }
+
+        /* Medium screens like tablets */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .grid-item {
+                padding: 20px;
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+
+            .typewriter h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* Larger screens */
+        @media (min-width: 769px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            p {
+                font-size: 28px;
+            }
+
+            .typewriter h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
