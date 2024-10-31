@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swiftBrawn</title>
+    <title>Typewriter Effect</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style type="text/css">
+/* styles.css */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+    background-color: #f5f5f5; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+}
+
+.typewriter h1 {
+    border-right: 4px solid black; /* Cursor effect */
+    white-space: nowrap; /* Prevent line break */
+    overflow: hidden; /* Hide overflow text */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* End with full width */
+    }
+}
+
+/* Keyframes for caret blink effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Invisible caret */
+    }
+    50% {
+        border-color: black; /* Visible caret */
+    }
+}
+    </style><!-- Link to your CSS file -->
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="typewriter">
+        <h1 id="welcome-text"></h1>
+    </div>
+    <script>
+        // script.js
+const welcomeText = "Welcome on board to swiftBrawn";
+const welcomeElement = document.getElementById('welcome-text');
+
+let index = 0;
+
+function type() {
+    if (index < welcomeText.length) {
+        welcomeElement.textContent += welcomeText.charAt(index);
+        index++;
+        setTimeout(type, 100); // Adjust typing speed here (100ms)
+    }
+}
+
+// Start the typing effect
+type();
+    </script>
 </body>
 </html>
