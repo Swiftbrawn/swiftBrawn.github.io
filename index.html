@@ -6,67 +6,101 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css"> 
     <style type="text/css">
-/* styles.css */
-body {
-    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
-    background-color: #f5f5f5; /* Background color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height */
-    margin: 0; /* Remove default margin */
-}
+        /* styles.css */
+        body {
+            font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+            background-color: #f5f5f5; /* Background color */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            margin: 0; /* Remove default margin */
+        }
 
-.typewriter h1 {
-    border-right: 4px solid black; /* Cursor effect */
-    white-space: nowrap; /* Prevent line break */
-    overflow: hidden; /* Hide overflow text */
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
-}
+        .grid-container {
+            display: grid; /* Enable grid layout */
+            grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+            gap: 20px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+            width: 100%; /* Full width of the container */
+            max-width: 1200px; /* Maximum width for better layout */
+        }
 
-/* Keyframes for typing effect */
-@keyframes typing {
-    from {
-        width: 0; /* Start with no width */
-    }
-    to {
-        width: 100%; /* End with full width */
-    }
-}
+        .grid-item {
+            background-color: purple; /* Background color */
+            color: white; /* Text color */
+            padding: 20px; /* Padding inside the boxes */
+            text-align: center; /* Center text */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
 
-/* Keyframes for caret blink effect */
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent; /* Invisible caret */
-    }
-    50% {
-        border-color: black; /* Visible caret */
-    }
-}
-    </style><!-- Link to your CSS file -->
+        .grid-item:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .typewriter h1 {
+            border-right: 4px solid black; /* Cursor effect */
+            white-space: nowrap; /* Prevent line break */
+            overflow: hidden; /* Hide overflow text */
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
+        }
+
+        /* Keyframes for typing effect */
+        @keyframes typing {
+            from {
+                width: 0; /* Start with no width */
+            }
+            to {
+                width: 100%; /* End with full width */
+            }
+        }
+
+        /* Keyframes for caret blink effect */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent; /* Invisible caret */
+            }
+            50% {
+                border-color: black; /* Visible caret */
+            }
+        }
+
+        p {
+            text-align: center; /* Center text */
+            font-size: 35px; /* Font size for paragraph */
+            margin: 20px 0; /* Margin for spacing */
+        }
+    </style>
 </head>
 <body>
     <div class="typewriter">
-        <h1 id="welcome-text"></h1>
-        
+        <h1 id="welcome-text"></h1> 
+    </div>
+    <p>Below are my projects working:</p>
+    <div class="grid-container">
+        <div class="grid-item"><a href="https://github.com/Swiftbrawn/swiftBrawn.github.io/tree/main/OnePageWebsite" style="color: wheat; text-decoration: none;">OnePageWebsite</a></div>
+        <div class="grid-item"><a href="https://github.com/Swiftbrawn/swiftBrawn.github.io/tree/main/arike" style="color: wheat; text-decoration: none;">Online Clothing Store</a></div>
+        <div class="grid-item"><a href="https://github.com/Swiftbrawn/swiftBrawn.github.io/tree/main/swiftCode" style="color: wheat; text-decoration: none;">Web Developer Site</a></div>
     </div>
     <script>
-        // script.js
-const welcomeText = "Welcome on board to swiftBrawn";
-const welcomeElement = document.getElementById('welcome-text');
+        // Typewriter effect script
+        const welcomeText = "Welcome on board to swiftBrawn";
+        const welcomeElement = document.getElementById('welcome-text');
+        let index = 0;
 
-let index = 0;
+        function type() {
+            if (index < welcomeText.length) {
+                welcomeElement.textContent += welcomeText.charAt(index);
+                index++;
+                setTimeout(type, 100); // Typing speed (100ms)
+            }
+        }
 
-function type() {
-    if (index < welcomeText.length) {
-        welcomeElement.textContent += welcomeText.charAt(index);
-        index++;
-        setTimeout(type, 100); // Adjust typing speed here (100ms)
-    }
-}
-
-// Start the typing effect
-type();
+        // Start the typing effect
+        type();
     </script>
 </body>
 </html>
