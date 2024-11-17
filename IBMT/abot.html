@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer</title>
+    <style>
+        html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  text-align: center;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+hr {
+  margin-bottom: 3em;
+  width: 7%;
+  transition: all ease-in-out 0.3s;
+}
+
+h1,h3 {
+  color: #333;
+}
+
+.container > h1 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.section {
+  display:block;
+  overflow:hidden;
+  padding: 0;
+}
+
+.section-grey {
+  background: #f5f5f5 !important;
+  padding: 50px 0;
+}
+
+.section__title {
+  font-size: 24px;
+  color: #3b3b58;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 14px 0;
+}
+.section__intro {
+  display: block;
+  text-align: center;
+  margin: 0 5% 30px;
+}
+
+.row {
+ margin-right: 0;
+ margin-left: 0;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1455894127589-22f75500213a?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=944&q=80') no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.80);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.shape-layer {
+  max-width:100%;
+  padding-left:10px;
+  padding-right:10px;
+  display:block;
+}
+
+.shape {
+  overflow:hidden;
+  position: absolute;
+  height: auto;
+}
+.shape path {
+  fill: none;
+}
+.shape-1 {
+  width: 122px;
+  top: 15%;
+  left: 65%;
+}
+.shape-2 {
+  width: 106px;
+  bottom: 15%;
+  left: 30%;
+}
+.shape-3 {
+  width: 136px;
+  top: 20%;
+  left: 70%;
+}
+.shape-4 {
+  width: 79px;
+  top: 50%;
+  left: 10%;
+}
+.shape-5 {
+  width: 49px;
+  top: 30%;
+  right: 75%;
+}
+.shape-6 {
+  width: 78px;
+  top: 5%;
+  left: 75%;
+}
+.shape-7 {
+  width: 57px;
+  bottom: 15%;
+  right: 20%;
+}
+.shape-8 {
+  width: 71px;
+  bottom: 15%;
+  right: 40%;
+}
+.shape-9 {
+  width: 59px;
+  top: 25%;
+  left: 40%;
+}
+
+.col-md-4,  {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.inner-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  @media only screen and (min-width: 320px) {
+    padding-left: 15px;
+    padding-right: 15px; 
+  }
+  @media only screen and (min-width: 400px) {
+    padding-left: 40px;
+    padding-right: 40px; 
+  }
+  @media only screen and (min-width: 680px) {
+    font-size: 75px;
+  }
+  @media only screen and (min-width: 950px) {
+    font-size: 100px;
+  }
+}
+.p1 {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  @media only screen and (max-width: 465px) {
+    position: relative;
+    top: 0.6em;
+  }
+}
+.p2 {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 100;
+  margin: 0;
+  line-height: 1;
+  color: #4FC3F7;
+  @media only screen and (max-width: 465px) {
+    position: relative;
+    top: 0.6em;
+  }
+}
+
+.p3 {
+  display: block;
+  font-size: 0.4em;
+  font-weight: 100;
+  margin: 0;
+  line-height: 1;
+  color: #4FC3F7;
+  @media only screen and (max-width: 465px) {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    top: 0.6em;
+  }
+}
+
+.hero-down {
+  position: absolute;
+  bottom: 0;
+  font-size: 2em;
+  height: 2em;
+  color: #f5f5f5;
+  border-radius: 100%;
+  &:hover, &:focus {
+    color: #ccc;
+  }
+&:active {
+    color: #f5f5f5;
+  }
+  .btn-react {
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    opacity: 0;
+    position: absolute;
+  }  
+  i {
+    vertical-align: bottom;
+    position: relative;
+    top: 0.1em;
+  }
+}
+
+@media only screen and (min-width: 43.75em) {
+  .section__intro {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+.section--cta {
+  color: #454545;
+  background: #f1f1f1;
+}
+
+.box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+}
+.box__grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.box__title {
+  font-family: "Montserrat", sans-serif;
+}
+.box__more {
+  color: #ff4e5c;
+}
+.box__content {
+  color: #454545;
+  text-align: center;
+  padding: 20px;
+}
+.box__content > i {
+  color: #3b3b58;
+}
+.box__content:hover .box__more {
+  color: #ff3545;
+}
+.box__content:hover .box__more i {
+  padding-left: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.name-hero
+{
+	background:rgba(0,0,0,.001);
+	bottom:0;
+	height:290px;
+	left:0;
+	margin:auto;
+	position:relative;
+	right:0;
+	top:0;
+	width:85%;
+}
+
+.me-img
+{
+	background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/490306/profile/profile-512_1.jpg) no-repeat center center ;
+	background-size:100%;
+  background-position:0px;
+	border-radius:100%;
+	height:150px;
+	margin:0 auto;
+	position:relative;
+	width:150px;
+}
+
+.name-hero h1
+{
+	font-family:Open Sans, sans-serif;
+	font-size:1.5em;
+	text-align:center;
+}
+
+.name-hero h1 em
+{
+	color:rgba(0,0,0,.3);
+	font-style:normal;
+	font-weight:700;
+}
+
+.name-hero p
+{
+	color:rgba(0,0,0,.5);
+	font-size:.75em;
+	line-height:1.5;
+	margin:0 8px 0 0;
+	text-align:center;
+}
+
+.name-hero .name-text
+{
+	margin:0 auto;
+	width:85%;
+}
+
+.inner
+{
+	margin:0 auto;
+	max-width:975px;
+	padding:3em;
+}
+
+.inner h1
+{
+	font-size:1.75em;
+}
+
+.inner p
+{
+	color:rgba(0,0,0,.3);
+}
+
+.inner p em
+{
+	color:rgba(0,0,0,.75);
+	font-style:normal;
+}
+
+.inner section
+{
+	margin:100px auto;
+}
+
+@media only screen and (min-width: 43.75em) {
+  .box {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+
+.section-paragraph {
+  color: #555;
+  text-align: left;
+}
+
+.section-white {
+  background: white;
+  padding: 50px 0;
+}
+
+.white {
+  color: #fff;
+}
+
+.background-img {
+  background: url(https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=850&q=80)no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.75);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  padding-top: 50px;
+}
+
+.no-padding {
+  padding:0 !important;
+}
+
+.box2 {
+  display: block;
+  height: 200px;
+  position: relative;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.box2:hover .box-content {
+  margin-top: -2em;
+}
+.box2 .box-content {
+  height: 100%;
+  position: relative;
+  top: 50%;
+  margin-top: -1em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.projects {
+  width: 50%;
+  float:left;
+  background-color: #333;
+  background: url(https://images.unsplash.com/photo-1455894127589-22f75500213a?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=944&q=80)no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.75);
+  background-blend-mode: multiply;
+}
+
+.diy {
+  width: 50%;
+  float: left;
+  background-color: #333;
+  background: url(https://images.unsplash.com/photo-1416339212457-ef9ffadc2903?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=1707&q=80)no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.75);
+  background-blend-mode: multiply;
+}
+
+.mijn-werk {
+    width: 50%;
+  float: left;
+  background-color: #333;
+  background: url(https://images.unsplash.com/photo-1414690165279-49ab0a9a7e66?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=853&q=80)no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.75);
+  background-blend-mode: multiply;
+}
+
+.contact {
+  width: 50%;
+  float:left;
+  background-color: #333;
+  background: url(https://images.unsplash.com/photo-1421757350652-9f65a35effc7?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1280&h=850&q=80)no-repeat center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.75);
+  background-blend-mode: multiply;
+}
+
+.projects:hover, .contact:hover, .diy:hover, .mijn-werk:hover {
+  background-color: rgba(0,0,0,0.85);
+  background-blend-mode: darken;
+}
+
+.box2:hover hr {
+  width: 15%;
+  transition: all ease-in-out 0.3s;
+}
+
+.spacing {
+  margin-bottom: 60px;
+}
+
+.icon-row {
+  margin: 0px auto;
+  width: 100%;
+}
+.icon-row i {
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 44px;
+  margin: 0px 20px;
+  padding: 20px 30px;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  @media only screen and (max-width: 465px) {
+    padding: 10px 10px;
+    margin: 20px 10px;
+    font-size: 0.6em;
+  }
+}
+
+.fa {
+  @media only screen and (max-width: 465px) {
+    font-size: 0.8em;
+  }
+}
+
+.icon-row i:hover {
+  background: #FFF;
+}
+
+.fa-google-plus:hover {
+  color: #dd4b39;
+}
+
+.fa-facebook:hover {
+  color: #3b5998;
+}
+
+.fa-linkedin:hover {
+  color: #007bb5;
+}
+
+.fa-twitter:hover {
+  color: #55acee;
+}
+
+.fa-chevron-up {
+  color: #fff;
+}
+
+a.button {
+  display:inline-block;
+  color:#FFF;
+  background-color: rgba(0,0,0,0.55);
+  text-decoration:none;
+  padding:10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom:10px;
+  -webkit-transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -ms-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
+}
+a.button:hover {
+  background-color:#555;
+}
+a.button.small {
+  background-color:#7f8c8d;
+  padding:8px;
+  font-size:0.8em;
+}
+a.button.small:hover {
+  background-color:#95a5a6;
+}
+
+/*Skill*/
+
+#techList {
+  display:none;
+	position: relative;
+  height: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: #666;
+}
+
+#techList li {
+	position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.html5 {
+  font-weight: 700;
+  letter-spacing: -.05em;
+  -webkit-transform: 
+  		scale(6.7, 7.8)
+ 			translate(1.18em, .68em);
+  -moz-transform: 
+    	scale(7.5, 7.8)
+ 			translate(1.18em, .68em);
+}
+
+.javascript {
+  letter-spacing: -.04em;
+  font-weight: 400;
+	-webkit-transform: 
+    	scale(1.3)
+    	rotate(90deg)
+    	translate(3.88em, -14.2em);
+  -moz-transform: 
+    	scale(1.4)
+    	rotate(90deg)
+    	translate(3.88em, -13.2em);
+}
+
+.accessibility {
+  letter-spacing: -.05em;
+  font-weight: 300;
+	-webkit-transform:
+    	scale(1.3, 1.33)
+    	rotate(90deg)
+    	translate(3.38em, -19.7em);
+  -moz-transform: 
+    	scale(1.4, 1.33)
+    	rotate(90deg)
+    	translate(4.1em, -18.0em);
+}
+
+.responsive {
+  font-weight: 300;
+  letter-spacing: -.03em;
+  word-spacing: .3em;
+  -webkit-transform: 
+    	scale(2)
+    	translate(2.12em, 5.14em);
+  -moz-transform: 
+    	scale(2)
+    	translate(2.12em, 5.14em);
+}
+
+.usability {
+  font-weight: 500;
+  letter-spacing: -.04em;
+  -webkit-transform: 
+    	scale(2.1, 2.4)
+      translate(10.5em, 4.3em);
+  -moz-transform: 
+      scale(2.85, 3)
+      translate(7.14em, 3.55em);
+}
+
+.ajax {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+	-webkit-transform: 
+    	scale(3.5, 3.8)
+    	rotate(90deg)
+    	translate(1.9em, -8.6em);
+  -moz-transform: 
+    	scale(2.4, 2.3)
+    	rotate(90deg)
+    	translate(6em, -5.8em);
+}
+
+.css3 {
+  letter-spacing: .01em;
+  font-weight: 700;
+	-webkit-transform: 
+    	scale(6, 6.75)
+    	rotate(90deg)
+    	translate(1.12em, -5.74em);
+  -moz-transform: 
+    	scale(6.8, 6.75)
+    	rotate(90deg)
+    	translate(1.32em, -4.54em);
+}
+
+.jquery {
+  letter-spacing: 0.045em;
+  font-weight: 700;
+	-webkit-transform: 
+    	scale(4.08, 4.28)
+    	translate(5.42em, 3.25em);
+  -moz-transform: 
+    	scale(3.88, 3.8)
+    	translate(5.42em, 3.72em);
+}
+
+.objectoriented {
+  font-weight: 700;
+  letter-spacing: -.010em;
+  -webkit-transform: 
+    	scale(1.85, 1.9)
+      translate(1.65em, 6.5em);
+  -moz-transform: 
+      scale(1.85, 1.9)
+      translate(1.86em, 6.5em);
+}
+
+.wordpress {
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  -webkit-transform: 
+    	scale(2.75, 3)
+      translate(1.54em, 4.95em);
+  -moz-transform: 
+      scale(2.75, 3)
+      translate(1.72em, 4.95em);
+}
+
+.seo {
+  font-weight: 300;
+  letter-spacing: -0.07em;
+  -webkit-transform: 
+    	scale(3.5, 4)
+      translate(6.8em, .95em);
+  -moz-transform: 
+      scale(3.9, 4)
+      translate(6.05em, .95em);
+}
+
+.crossbrowser {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  word-spacing: .2em;
+  -webkit-transform: 
+  		scale(1.5)
+      translate(1.34em, 11.58em);
+  -moz-transform: 
+      scale(2)
+      translate(2.28em, 8.58em);
+}
+
+.webstandards {
+  font-weight: 300;
+  letter-spacing: 0em;
+  word-spacing: .1em;
+  -webkit-transform: 
+    	scale(2)
+      translate(12.7em, 8.6em);
+  -moz-transform: 
+      scale(2)
+      translate(12.7em, 8.6em);
+}
+
+.jg {
+  color: #ee5d29;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  -webkit-transform: 
+    	scale(3.3)
+      translate(7.3em, 2.15em);
+  -moz-transform: 
+      scale(3.4)
+      translate(7.03em, 2.15em);
+}
+
+.skills {
+  color: #ee5d29;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  -webkit-transform: 
+    	scale(1.8)
+      translate(8.95em, 9.55em);
+  -moz-transform: 
+      scale(1.8)
+      translate(9.95em, 9.55em);
+}
+
+/*Footer*/
+
+.footer {
+  display:block;
+  box-size: border-box;
+  -webkit-box-size: border-box;
+  padding: 40px 40px;
+  color: #555;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.footer p {
+  opacity: .65;
+}
+
+    </style>
+</head>
+<body>
+    <section class="hero" name="top">
+        <div class="shape-layer shape-layer-1">
+
+            <svg class="shape shape-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 207.2 227.4">
+                    <path d="M10.4,218.1L196.8,9.3" />
+            </svg>
+
+            <svg class="shape shape-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 141 118">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230 135.1">
+                    <path d="M220.2,48.9c-21.9-21.6-51.9-34.9-85-34.9 C68.2,14,14,68.2,14,135.1" />
+            </svg>
+
+            <svg class="shape shape-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.5 111.9">
+                    <path d="M0,97.9c53.8,0,99.5-35.3,115.2-83.9H0" />
+            </svg>
+
+            <svg class="shape shape-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 83.3 88.5">
+                    <path d="M0,14h69.3l0,74.5" />
+            </svg>
+
+            <svg class="shape shape-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 131.1 81.3">
+                    <path d="M118.8,6.8L85.2,67.3H0" />
+            </svg>
+
+
+            <svg class="shape shape-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.2 75.7">
+                    <path d="M85.4,9L48.1,53.8L10.8,9" />
+            </svg>
+
+            <svg class="shape shape-8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120.4 104.2">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 99.7 149">
+                    <path d="M12.2,142.2L87.5,6.8" />
+            </svg>
+    </div>
+
+    <div class="shape-layer shape-layer-2">
+
+            <svg class="shape shape-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 207.2 227.4">
+                    <path d="M10.4,218.1L196.8,9.3" />
+            </svg>
+
+            <svg class="shape shape-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 141 118">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230 135.1">
+                    <path d="M220.2,48.9c-21.9-21.6-51.9-34.9-85-34.9 C68.2,14,14,68.2,14,135.1" />
+            </svg>
+
+            <svg class="shape shape-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.5 111.9">
+                    <path d="M0,97.9c53.8,0,99.5-35.3,115.2-83.9H0" />
+            </svg>
+
+            <svg class="shape shape-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 83.3 88.5">
+                    <path d="M0,14h69.3l0,74.5" />
+            </svg>
+
+            <svg class="shape shape-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 131.1 81.3">
+                    <path d="M118.8,6.8L85.2,67.3H0" />
+            </svg>
+
+
+            <svg class="shape shape-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.2 75.7">
+                    <path d="M85.4,9L48.1,53.8L10.8,9" />
+            </svg>
+
+            <svg class="shape shape-8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120.4 104.2">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 99.7 149">
+                    <path d="M12.2,142.2L87.5,6.8" />
+            </svg>
+    </div>
+
+    <div class="shape-layer shape-layer-3">
+
+            <svg class="shape shape-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 207.2 227.4">
+                    <path d="M10.4,218.1L196.8,9.3" />
+            </svg>
+
+            <svg class="shape shape-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 141 118">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 230 135.1">
+                    <path d="M220.2,48.9c-21.9-21.6-51.9-34.9-85-34.9 C68.2,14,14,68.2,14,135.1" />
+            </svg>
+
+            <svg class="shape shape-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.5 111.9">
+                    <path d="M0,97.9c53.8,0,99.5-35.3,115.2-83.9H0" />
+            </svg>
+
+            <svg class="shape shape-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 83.3 88.5">
+                    <path d="M0,14h69.3l0,74.5" />
+            </svg>
+
+            <svg class="shape shape-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 131.1 81.3">
+                    <path d="M118.8,6.8L85.2,67.3H0" />
+            </svg>
+
+
+            <svg class="shape shape-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.2 75.7">
+                    <path d="M85.4,9L48.1,53.8L10.8,9" />
+            </svg>
+
+            <svg class="shape shape-8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120.4 104.2">
+                    <path d="M9.9,45.9L36,19.8l74.5,74.5" />
+            </svg>
+
+            <svg class="shape shape-9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 99.7 149">
+                    <path d="M12.2,142.2L87.5,6.8" />
+            </svg>
+    </div>
+<div class="inner-text">
+<p class="p1" id="name">IDRIS</p>
+<p class="p2">TIJANI</p>
+<p class="p3"><span class="white">Front-end</span> & Back-end <span class="white">Developer</span></p>
+<div class="icon-row">
+  <i class="fa fa-google-plus"></i>
+  <i class="fa fa-linkedin"></i>
+  <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter "></i>  		
+    </div>
+</div>
+<a class="hero-down" href="#about">
+<div class="btn-react"></div>
+<i class="fa fa-chevron-down"></i>
+</a>
+</section>
+<section id="about" name="about" class="section-intro section-white">
+      <div class="container">
+        <h1>Over to Idris Tijani</h1>
+        <hr />
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 spacing">
+            <p class="section-paragraph">"swiftBraw the number one TechFlow is like strong espresso. Direct, sharp, and to the point. <br> <br> I avoid unnecessary fluff, but I’m all about clear communication. <br> <br>
+
+                Hi, I’m IDRIS TIJANI, and I’m excited to welcome you to my portfolio! Every day, I challenge myself to grow—whether it’s refining my code, simplifying designs, or exploring the latest technologies, both online and offline. The results of these efforts can be seen in my work. Enjoy exploring!"
+            </p>
+          </div>
+        </div>
+<div class="row">
+<div class="container">
+<div class="col-sm-12 spacing">
+   <ul id="techList">
+<li class="html5">html5</li>
+<li class="css3">css3</li>
+<li class="javascript">javascript</li>
+<li class="jquery">jquery</li>
+<li class="wordpress">wordpress</li>
+<li class="webstandards">web standards</li>
+<li class="accessibility">accessibility</li>
+<li class="usability">usability</li>
+<li class="seo">seo</li>
+<li class="responsive">responsive layout</li>
+<li class="ajax">ajax</li>
+<li class="objectoriented">object oriented</li>
+<li class="crossbrowser">cross browser</li>
+<li class="jg">j.g.</li>
+<li class="skills">skills</li>
+</ul>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+<section class="section section-gray no-padding spacing">
+<div class="box2 projects">
+    <div class="box-content">
+          <p>Mijn Portfolio</p>
+    <hr />
+    </div>
+</div>
+
+<div class="box2 contact">
+    <div class="box-content">
+          <p>Mijn Blog</p>
+    <hr />
+    </div>
+</div>
+
+<div class="box2 diy">
+    <div class="box-content">
+          <p>Mijn Instructables</p>
+    <hr />
+    </div>
+</div>
+
+
+<div class="box2 mijn-werk">
+<div class="box-content">
+  <p>Mijn Werk</p>
+  <hr />
+</div>
+</div>
+
+</section>
+<section class="section section-white">
+<div class="container">
+  <h1>Test us today, and be bless with amzing website.</h1>
+  <hr />
+  <div class="row">
+    <div class="col-sm-3">
+      
+      <div class="name-hero">
+        <div class="me-img"></div>
+          <div class="name-text">
+            <h1>Idris<em>TIJANI</em></h1>
+            <p>Lagos, Nigeria</p>
+            <p>tijaniidris124@yahoo.com</p> 
+            <p>08161791297</p>
+          </div>
+      </div>
+      
+      
+    </div>
+    <div class="col-sm-9">
+      <form class="center-block" action="#" method="post">
+        <div class="form-group">
+          <label class="sr-only" for="inputName">Full name</label>
+          <input id="inputName" class="form-control" type="text" placeholder="Idris Tijani" required />
+        </div>
+        <div class="form-group">
+          <label for="inputMail" class="sr-only">Email Address</label>
+          <input id="inputMail" class="form-control" type="email" placeholder="drizteejay@mail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="inputMessage" class="sr-only">Your Message</label>
+          <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default" style="float:left;" type="submit" value="Hire me">Click to Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+<hr />
+<section class="section section-gray background-img">
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+             <p class="section-paragraph white"> Idri Opeyemi Tijani</p>
+<p class="section-paragraph"><a
+href="mailto:dave@pahgawks.com" class="button">driztee@gmail.com</a> <a
+href="https://davepvm.tumblr.com/" class="button" target="_blank">Gmail</a> <a
+href="http://pahgawk.deviantart.com/" class="button" target="_blank">Tiktok</a> <a
+href="http://pahgawk.newgrounds.com/" class="button" target="_blank">Facebook</a> <a
+href="https://www.youtube.com/pahgawk" class="button" target="_blank">YouTube</a> <a
+href="https://www.twitter.com/davepvm" class="button" target="_blank">Twitter</a> <a
+href="http://pahgawks.bandcamp.com/" class="button" target="_blank">Instagram</a> <a
+href="https://soundcloud.com/davidpvm" class="button" target="_blank">Linkedin</a>
+  </p>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2 spacing">
+          <a class="hero-down" href="#top">
+    <div class="btn-react"></div>
+      <i class="fa fa-chevron-up"></i>
+  </a>
+</div>
+</div>
+</section>
+<div class="footer">
+<copyright class="copy fade-in">&copy; 2024 <a href="swiftBrawn.github.iom">SwiftBrawn</a>. Thanks for watching and happy coding!</copyright>
+
+</div>
+<script>
+    // smooth scroll to div
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+$('[data-skill]').each(function(){
+
+	var item = $(this),
+		skill = item.data('skill'),
+		size = item.data('skill-size'),
+		border = 5,
+		radius = (size / 2) - border,
+		circumference = 2 * Math.PI * radius,
+		progress = circumference - ((circumference / 100) * skill),
+		speed = 1000;
+	
+	item.append('<h4>0</h4><svg><circle class="back" /><circle class="front" /></svg>');
+	
+	$({Counter: 0}).animate({
+			Counter: skill
+		}, {
+			duration: speed,
+			easing: 'swing',
+			step: function () {
+			item.find('h4').text(Math.ceil(this.Counter) + '%');
+		}
+	});
+	
+	item.find('svg').width(size).height(size);
+	
+	item.find('circle').attr({
+		'r' : radius,
+		'cy' : radius + border,
+		'cx' : radius + border
+	});
+	
+	item.find('.front').css({
+		'stroke-dasharray' : circumference,
+		'stroke-dashoffset' : circumference
+	}).animate({
+		'stroke-dashoffset' : progress
+	}, speed);
+
+});
+var cfg = {
+		easing: [0.165, 0.84, 0.44, 1],
+		duration: 2500,
+		delay: 700,
+		layerDelay: 10000,
+		width: 28,
+		positioning: true,
+		colors: [
+				'#027CA5',
+				'#75B5C6',
+				'#00FFD0',
+				'#00B994',
+				'#BEF5FE'
+		]
+}
+
+$('.shape-layer').each(function(i) {
+		var $this = $(this);
+
+		setTimeout(function() {
+				var $paths = $this.find('path');
+
+				strokeSetup($paths);
+				strokeOut($paths);
+
+		}, cfg.layerDelay * i);
+});
+
+function strokeSetup($el) {
+		$el.each(function(i) {
+				var $this = $(this),
+						pLen = Math.ceil($this.get(0).getTotalLength());
+
+				$this.css({
+						'stroke-dasharray': pLen,
+						'stroke-dashoffset': pLen,
+						'stroke-width': cfg.width
+				});
+		});
+}
+
+function strokeOut($el) {
+		var pathCount = $el.length,
+				iterationCount = pathCount;
+
+		$el.each(function(i) {
+				var $this = $(this),
+						pLen = Math.ceil($this.get(0).getTotalLength()),
+						color = cfg.colors[getRandom(0, cfg.colors.length)];
+
+				setTimeout(function() {
+						$this.css({
+								'stroke': color
+						});
+
+						if (cfg.positioning) {
+								var side = ['top', 'bottom', 'left', 'right'],
+										cssO = {};
+
+								$this.parent().css({
+										top: 'auto',
+										bottom: 'auto',
+										left: 'auto',
+										right: 'auto'
+								});
+
+								cssO[side[getRandom(0, 1)]] = getRandom(0, 40) + '%';
+
+								var firstPos = cssO[Object.keys(cssO)[0]],
+										sideAmount = (parseInt(firstPos) < 20) ? 100 : 20;
+
+								cssO[side[getRandom(2, 3)]] = getRandom(0, sideAmount) + '%';
+
+								$this.parent().css(cssO);
+						}
+
+						$this.velocity({
+								'stroke-dashoffset': 0,
+						}, {
+								duration: cfg.duration,
+								easing: cfg.easing
+						});
+
+						if (!--iterationCount) {
+								strokeIn($el);
+						}
+				}, cfg.delay * i);
+		});
+
+}
+
+function strokeIn($el) {
+		var pathCount = $el.length,
+				iterationCount = pathCount;
+
+		$el.each(function(i) {
+				var $this = $(this),
+						pLen = Math.ceil($this.get(0).getTotalLength());
+
+				setTimeout(function() {
+
+						$this.velocity({
+								'stroke-dashoffset': pLen
+						}, {
+								duration: cfg.duration,
+								easing: cfg.easing
+						});
+
+						if (!--iterationCount) {
+								strokeOut($el);
+						}
+				}, cfg.delay * i);
+		});
+}
+
+function getRandom(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+</script>
+</body>
+</html>

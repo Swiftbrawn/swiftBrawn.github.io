@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Idris Tijani</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+body {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+/* Utility */
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+hr {
+    margin: 1em auto;
+    width: 7%;
+    border: 1px solid #ccc;
+    transition: width 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./img/pexels-heyho-8089092.jpg') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .p1, .hero .p2, .hero .p3 {
+    margin: 0;
+}
+
+.hero .p1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.hero .p2 {
+    font-size: 2.5em;
+    color: #4FC3F7;
+}
+
+.hero .p3 {
+    font-size: 1em;
+    color: #4FC3F7;
+}
+
+.icon-row {
+    margin-top: 20px;
+}
+
+.icon-row a {
+    margin: 0 10px;
+    font-size: 2em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.icon-row a:hover {
+    color: #4FC3F7;
+}
+
+/* Scroll Down Button */
+.hero-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hero-down:hover {
+    color: #4FC3F7;
+}
+
+/* About Section */
+.section-white {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-white h1 {
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.section-paragraph {
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4FC3F7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ABD;
+}
+
+/* Footer */
+footer.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer.footer a {
+    color: #4FC3F7;
+    text-decoration: none;
+}
+
+footer.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero .p1, .hero .p2, .hero .p3 {
+        font-size: 1.5em;
+    }
+
+    form button {
+        font-size: 0.9em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="shape-layer shape-layer-1">
+            <svg class="shape shape-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207.2 227.4">
+                <path d="M10.4,218.1L196.8,9.3" />
+            </svg>
+            <!-- Add remaining shapes here -->
+        </div>
+        <div class="inner-text">
+            <p class="p1" id="name">IDRIS</p>
+            <p class="p2">TIJANI</p>
+            <p class="p3"><span class="white">Founder</span> IBMT Nigeria <span class="white">Limited</span></p>
+            <div class="icon-row">
+                <a href="https://web.facebook.com/IBMTNigerialimited" aria-label="Google+" class="fab fa-google-plus"></a>
+                <a href="https://www.linkedin.com/in/idris-opeyemi-tijani-062b241b8/" aria-label="LinkedIn" class="fab fa-linkedin"></a>
+                <a href="https://web.facebook.com/IBMTNigerialimited" aria-label="Facebook" class="fab fa-facebook"></a>
+                <a href="https://x.com/drizteejay" aria-label="Twitter" class="fab fa-x"></a>
+            </div>
+        </div>
+        <a class="hero-down" href="#about" aria-label="Scroll Down">
+            <div class="btn-react"></div>
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-intro section-white">
+        <div class="container">
+            <h1>IBMT is the best company in the world</h1>
+            <hr />
+            <h3>Founder/Owner:</h3>
+            <p class="section-paragraph">
+                <span>Idris Opeyemi Tijani has over a decade of experience in the plumbing industry, with expertise in mechanical drawing and the installation of plumbing accessories.</span>
+                <br><br>
+                <span>The management team also includes Yusuf Mubarak Akinjide, serving as the company secretary and bringing valuable skills in digital analysis, and Sadiq Adebola Quadri, a shareholder with a 20% stake in the company.</span>
+                <br><br>
+                <span>
+                    The organizational structure of IBMT Nigeria Limited is built on a foundation of teamwork, accountability, and a commitment to continuous improvement.
+                    <br><br>
+                    As a leading entity in the plumbing industry, our management approach ensures operational efficiency, customer satisfaction, and sustained business growth, with a strong focus on key areas essential for effective management.
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h1>Dear client, feel free to let us know how we can help you?</h1>
+            <hr />
+            <form class="center-block" action="#" method="post">
+                <div class="form-group">
+                    <label for="inputName">Full Name</label>
+                    <input id="inputName" class="form-control" type="text" placeholder="Idris Tijani" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputMail">Email Address</label>
+                    <input id="inputMail" class="form-control" type="email" placeholder="tijaniidris124@yahoo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Your Message</label>
+                    <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+                </div>
+                <button class="btn btn-default" type="submit">Click Me</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="copy">&copy; Idris Tijani - Director; IBMT Nigeria Limited <a href="swiftBrawn.github.io">SwiftBrawn</a>.</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../IBMT/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBMT Nigeria Limited</title>
+    
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            color: white;
+            background: black;
+            font-family: 'Cormorant Garamond', serif;
+            text-transform: uppercase;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5%;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 0.2em;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: clamp(1rem, 5vw, 5rem);
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 0.5em;
+            color: hsl(0, 0%, 80%);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            visibility: hidden;
+            top: 0;
+        }
+
+        .outer,
+        .inner {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Background images for sections */
+        .first .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Mech1.jpg'); }
+        .second .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Commercial-Structural-3D.jpg'); }
+        .third .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Plumbing-Website-Pic.jpg'); }
+        .fourth .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/hotel_guest_room_interior.jpg'); }
+        .fifth .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/ecm50Banner.jpg'); }
+        .sixth .bg { background-image: var(--bg-gradient), url('https://example.com/real-estate.jpg'); }
+        .seventh .bg { background-image: var(--bg-gradient), url('https://example.com/civil-engineer.jpg'); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>IBMT Nigeria Limited</div>
+        <div><a href="#services">Our Services</a></div>
+    </header>
+
+    <!-- Sections -->
+    <section class="first">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Mechanical</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">2D-3D Mechanical Engineering Design</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="third">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Plumbing</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fourth">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Electrical</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fifth">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Structural</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sixth">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Real Estate Developer</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="seventh">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <h2 class="section-heading">Civil Engineer</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP Animation -->
+    <script>
+        gsap.registerPlugin(Observer);
+
+        const sections = document.querySelectorAll("section"),
+              images = document.querySelectorAll(".bg"),
+              headings = gsap.utils.toArray(".section-heading"),
+              outerWrappers = gsap.utils.toArray(".outer"),
+              innerWrappers = gsap.utils.toArray(".inner"),
+              wrap = gsap.utils.wrap(0, sections.length);
+
+        let currentIndex = -1,
+            animating = false;
+
+        gsap.set(outerWrappers, { yPercent: 100 });
+        gsap.set(innerWrappers, { yPercent: -100 });
+
+        function gotoSection(index, direction) {
+            if (animating) return;
+            animating = true;
+
+            const fromTop = direction === -1,
+                  dFactor = fromTop ? -1 : 1;
+
+            const tl = gsap.timeline({
+                defaults: { duration: 1.25, ease: "power1.inOut" },
+                onComplete: () => animating = false,
+            });
+
+            if (currentIndex >= 0) {
+                tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+                  .set(sections[currentIndex], { autoAlpha: 0 });
+            }
+
+            gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+            tl.fromTo([outerWrappers[index], innerWrappers[index]], {
+                yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
+            }, {
+                yPercent: 0,
+            })
+              .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 });
+
+            currentIndex = index;
+        }
+
+        Observer.create({
+            type: "wheel,touch,pointer",
+            wheelSpeed: -1,
+            onDown: () => gotoSection(currentIndex - 1, -1),
+            onUp: () => gotoSection(currentIndex + 1, 1),
+        });
+
+        gotoSection(0, 1);
+    </script>
+</body>
+</html>

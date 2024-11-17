@@ -1,0 +1,246 @@
+/* 
+Colors:
+Dark grey: #6E7783; 
+Green: #77AAAD;
+Light grey: #D8E6E7;
+Grey-green: #9DC3C1;
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+html,
+body,
+* {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #6E7783;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+::selection {
+  color: #D8E6E7;
+  background-color: #6E7783;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: #6E7783;
+}
+
+.caption {
+  color: #6E7783;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:link {
+  color: #9DC3C1;
+  text-transform: uppercase;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #77AAAD;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+section {
+  display: block;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+
+.navbar-portfolio .navbar-toggle .icon-bar {
+  background-color: #6E7783;
+  text-align: center;
+}
+
+.navbar-portfolio .navbar-toggle {
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}
+
+.center-element {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.vertical-align {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: inherit;
+  color: #fff;
+  resize: vertical;
+  overflow: auto;
+}
+
+.navbar-portfolio {
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+.navbar-portfolio ul li a:hover,
+.navbar-portfolio ul li a:focus,
+a.active {
+  background-color: #D8E6E7;
+  color: #77AAAD;
+  border-bottom: 5px solid #77AAAD;
+}
+
+.navbar-portfolio {
+  background-color: #fff;
+  color: #6E7783;
+  border: none;
+}
+
+.navbar-portfolio .navbar-brand {
+  color: #111;
+  text-transform: uppercase;
+}
+
+#home {
+  background: url('https://static.pexels.com/photos/58597/pexels-photo-58597.jpeg') center center fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+#home h1 {
+  color: #fff;
+}
+
+#home .container {
+  color: #fff;
+}
+
+#home ul {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+#home ul li {
+  display: inline-block;
+  *display: inline;
+  /*IE7*/
+  *zoom: 1;
+  /*IE7*/
+  margin: 0 6px;
+}
+
+#home ul li a,
+#home ul li a i {
+  color: #FFF;
+  font-size: 48px;
+}
+
+#home ul li a i:hover,
+#home ul li a i:focus,
+#home ul li a i:active {
+  color: #6E7783;
+}
+
+#portfolio {}
+
+#about {
+  background-color: #D8E6E7;
+  min-height: 100%;
+  margin-bottom: 100px;
+}
+
+.bottom-image {
+  margin-bottom: 100px;
+}
+
+#about h2,
+#about h3,
+#about p {
+  color: #333;
+  text-align: left;
+}
+
+#contact .container {
+  color: #6E7783;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+#contact ul {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+#contact ul li {
+  display: inline-block;
+  *display: inline;
+  /*IE7*/
+  *zoom: 1;
+  /*IE7*/
+  margin: 0 6px;
+}
+
+#contact a {
+  color: #6E7783;
+  font-weight: bold;
+  border-bottom: 2px solid #6E7783;
+}
+
+#contact a:hover {
+  text-decoration: none;
+  color: #77AAAD;
+  border-bottom: 2px solid #77AAAD;
+}
+
+#contact ul li a,
+#contact ul li a i {
+  color: #6E7783;
+  font-size: 48px;
+  border-bottom: none;
+  transition: color .4s ease;
+}
+
+#contact ul li a:hover,
+#contact ul li a:focus,
+#contact ul li a:active,
+#contact ul li a i:hover,
+#contact ul li a i:focus,
+#contact ul li a i:active {
+  color: #77AAAD;
+  border-bottom: none;
+}

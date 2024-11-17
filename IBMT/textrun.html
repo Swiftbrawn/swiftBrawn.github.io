@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed header styling */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .indiri p, .phone span {
+            margin: 0;
+        }
+
+        .indiri strong {
+            color: #ffdd57;
+        }
+
+        .phone span {
+            color: white;
+        }
+
+        /* Demo content */
+        .content {
+            margin-top: 60px; /* Add space for fixed header */
+            padding: 20px;
+            height: 200vh; /* Extra height for scroll testing */
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="indiri">
+            <p>Email us at: <strong>ibmtnigerialimited@gmail.com</strong></p>
+        </div>
+        <div class="phone">
+            <span><i class="fa-solid fa-phone"></i> 08161791297</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        <p>Scroll down to see the header disappear when you reach the bottom!</p>
+        <!-- Add more content here for demonstration -->
+    </div>
+
+    <script>
+        // JavaScript to hide the header at the bottom of the page
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            // Check if the user is near the bottom of the page
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const pageHeight = document.documentElement.offsetHeight;
+
+            if (scrollPosition >= pageHeight) {
+                header.classList.add('hidden'); // Hide header
+            } else {
+                header.classList.remove('hidden'); // Show header
+            }
+        });
+    </script>
+</body>
+</html>
