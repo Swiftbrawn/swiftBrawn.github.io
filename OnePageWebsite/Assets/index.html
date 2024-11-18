@@ -4,88 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dance contest</title>
+    <title>Dance Contest</title>
 
-    <!-- style.css -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./CSS/styles.css">
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="../CSS/css/all.css">
-
-    <!--      dark and light      -->
+    <!-- Dark and Light Mode Styles -->
     <link id="themecolor" rel="stylesheet" href="./CSS/light.css">
-    <link rel="icon" href="./IMG/iop.png" type="text/image">
-    <link rel="stylesheet" href="/Assets/owlcarrousel/assets/owl.carousel.css">
-<link rel="stylesheet" href="/Assets/owlcarrousel/assets/owl.theme.default.min.css">
-
+    <link rel="icon" href="./IMG/iop.png" type="image/png">
 
 </head>
+
 <body>
-        <div class="owl-carousel slider">
-            <div class="bg1"></div>
-            <div class="bg2"></div>
-            <div class="bg3"></div>
-        </div>
-    <!-- the Header -->
+    <!-- Owl Carousel Section -->
+    <div class="owl-carousel owl-theme slider">
+        <div class="bg1" style="background-image: url('./IMG/1.jpg'); height: 100vh; background-size: cover;"></div>
+        <div class="bg2" style="background-image: url('./IMG/2.jpg'); height: 100vh; background-size: cover;"></div>
+        <div class="bg3" style="background-image: url('./IMG/3.jpg'); height: 100vh; background-size: cover;"></div>
+    </div>
+
+    <!-- Header -->
     <div class="logo">
-         <div class="section1"> 
+        <div class="section1">
             <header>
                 <div class="logo2">
                     <img src="./IMG/logo.png" alt="Dance Logo" width="50px" class="logo-img">
-
                     <nav>
-                        <div class="List">
-                            <ul class="main">
-                                <li><a href="#">intro</a></li>
-                                <li><a href="#">countdown</a></li>
-                                <li><a href="#">notes</a></li>
-                                <li><a href="#">location</a></li>
-                                <li><a href="#">contact</a></li>
-                            </ul>
-
-
+                        <ul class="main">
+                            <li><a href="#">Intro</a></li>
+                            <li><a href="#">Countdown</a></li>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Location</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
                     </nav>
+
+                    <!-- Dark/Light Mode Toggle -->
                     <div class="toggle-on-off">
                         <i class="fa-solid fa-moon moon"></i>
-
-                        <button onclick="toggleMode()"><i class="fa-solid fa-toggle-on toggleon" id="toggleon"></i>
+                        <button onclick="toggleMode()">
+                            <i class="fa-solid fa-toggle-on toggleon" id="toggleon"></i>
                         </button>
-
                         <i class="fa-solid fa-sun sun"></i>
-
                     </div>
-                    <a href="https://wa.me/08161791297>?text=Hello!" target="_blank" class="call"><i class="fa-solid fa-phone-volume"></i></a>
-                         
-                 <!-- barline dropdown for media -->
+
+                    <a href="https://wa.me/08161791297?text=Hello!" target="_blank" class="call">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </a>
+
+                    <!-- Menu Icon for Mobile -->
                     <i class="fa-solid fa-bars" id="barline"></i>
                 </div>
             </header>
         </div>
-
-        <!-- Hero  -->
-        <section>
-            <div id="presents" style="text-align: center;">
-                <h5 >imomotimi foundation presents</h5>
-                <div class="ijaw">
-                    <h1>imomotimi ijaw </h1>
-                    <h1>dance contest 2024</h1>
-                </div>
-                <button value="submit">Download entry form <i class="fa-solid fa-download"></i></button>
-                <p>All duly filled out forms and the entry
-                    fees should be brought to the auditions.</p>
-                    <div class="mouse">
-                        <i class="fa-solid fa-mouse"></i>
-                    </div>
-
-            </div>
-
-            <!-- <div class="mouse">
-                <i class="fa-solid fa-mouse"></i>
-            </div> -->
-            <img class="shape" src="./IMG/shape-top-white-80.png" id="topwhite" alt="" width="100%">
-        </section>
     </div>
-    <!-- countdown -->
+
+    <!-- Hero Section -->
+    <section>
+        <div id="presents" style="text-align: center;">
+            <h5>Imomotimi Foundation Presents</h5>
+            <div class="ijaw">
+                <h1>Imomotimi Ijaw</h1>
+                <h1>Dance Contest 2024</h1>
+            </div>
+            <button value="submit" class="btn btn-primary" style="background-color: crimson; width: 300px;">Download Entry Form <i class="fa-solid fa-download" style="color: crimson;"></i></button>
+            <p>All duly filled out forms and entry fees should be brought to the auditions.</p>
+            <div class="mouse">
+                <i class="fa-solid fa-mouse"></i>
+            </div>
+        </div>
+        <img class="shape" src="./IMG/shape-top-white-80.png" id="topwhite" alt="" width="100%">
+    </section>
+
+    <!-- Countdown Section -->
     <section>
         <div class="countdown-container" onload="updateCountdown()">
             <h2>Countdown to Audition</h2>
@@ -93,7 +94,7 @@
                 <div class="time-section">
                     <span class="time" id="days">29</span>
                     <hr width="15px">
-                    <p id="demo">Days</p>
+                    <p>Days</p>
                 </div>
 
                 <span class="colon">:</span>
@@ -117,22 +118,20 @@
                     <p>Seconds</p>
                 </div>
             </div>
-            <img src="./IMG/shape-top-grey-80.png" id="shapegrey" alt="Logo Bottom" class="logoBottom"
-                width="100%">
+            <img src="./IMG/shape-top-grey-80.png" id="shapegrey" alt="Logo Bottom" width="100%">
         </div>
     </section>
 
-
-    <!-- prizing -->
+    <!-- Prizing Section -->
     <section>
         <div class="important">
-            <h2 class="typewriter"> Important things to note....</h2>
+            <h2 class="typewriter">Important Things to Note....</h2>
             <div class="detail">
                 <ul class="prize-list">
                     <li><i class="fa fa-money-bill-wave"></i></li>
                     <li>Pricing</li>
-                    <li class="typewriter">Audition forms are available for </li>
-                    <li> &#8358;1,000 single contestants,</li>
+                    <li>Audition forms are available for</li>
+                    <li>&#8358;1,000 single contestants</li>
                     <li>and &#8358;1,500 for a group of five.</li>
                 </ul>
             </div>
@@ -147,39 +146,27 @@
             </div>
         </div>
     </section>
-    <!-- map area-->
-    <div style="position: relative;">
-        <img class="grey" src="./IMG/shape-top-grey-80.png" id="topgrey" alt="" width="100%">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.0515592997285!2d6.318390373439563!3d4.931030995044984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106a055be1dcce59%3A0xa6c5b6a97ac6c1a!2sNitro%20Studios!5e0!3m2!1sen!2sng!4v1727795628840!5m2!1sen!2sng"
-            width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-    </div>
 
+    <!-- Contact Section -->
     <section>
         <div class="contact-section">
             <div class="contact-info">
                 <h2>For More Information:</h2>
                 <p><strong>Hotlines:</strong> 07035973706 & 08108112759</p>
                 <p><strong>Email:</strong> info@ijawdancecontest.ng</p>
-                <p><strong>Audition Location:</strong> Nitro Studio, Tamara Hall, Otiotio Road, Yenegoa, Bayelsa State.
-                </p>
+                <p><strong>Audition Location:</strong> Nitro Studio, Tamara Hall, Otiotio Road, Yenegoa, Bayelsa State.</p>
             </div>
-
             <div class="contact-form">
                 <form action="" method="POST">
                     <div class="form-group">
                         <div class="inputicon">
                             <i class="fas fa-user"></i><input type="text" name="fname" placeholder="Name">
                         </div>
-
                         <div class="inputicon">
-                            <i class="fas fa-phone-volume"></i><input type="tel" name="phone" placeholder="Phone">
+                            <i class="fa-solid fa-phone"></i><input type="tel" name="phone" placeholder="Phone">
                         </div>
                     </div>
-
-
-                    <div class="form-group formgroup">
+                    <div class="form-group">
                         <div class="inputicon">
                             <i class="fas fa-envelope"></i><input type="email" name="email" placeholder="Email">
                         </div>
@@ -187,66 +174,58 @@
                             <i class="fas fa-info-circle"></i><input type="text" name="subject" placeholder="Subject">
                         </div>
                     </div>
-
                     <div class="inputicon">
-                        <i class="fa-solid fa-pencil"></i><textarea name="message" id="message"
-                            placeholder="How can we help you? Feel free to get in touch!"></textarea>
+                        <i class="fa-solid fa-pencil"></i><textarea name="message" placeholder="How can we help you? Feel free to get in touch!"></textarea>
                     </div>
-                    <button type="submit" class="submit">Get In Touch</button>
+                    <button type="submit" class="submit btn btn-success">Get In Touch</button>
                 </form>
             </div>
         </div>
     </section>
-    <section>
-        <footer>
-            <div class="footerarea">
-                <h3>We are social</h3>
-                <div class="socialIcons">
-                    <a href="#"><span class="icon-container"><i class="fa-brands fa-facebook-f"></i></span></i></a>
-                    <a href="#"><span class="icon-container"><i class="fa-brands fa-x-twitter"></i></span></i></a>
-                    <a href="#"><span class="icon-container"><i class="fa-brands fa-instagram"></i></span></i></a>
-                    <a href="#"><span class="icon-container"><i class="fa-brands fa-youtube"></i></span></i></a>
-                </div>
-            </div>
-            <p>
-                <hr>
-            </p>
-            <p>&copy; 2024 Imomotimi Foundation. All Rights Reserved. <a href="#" class="swiftBrawn" style="text-decoration: none; color: wheat;">swiftBrawn</p>
 
-            <div>
-                <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- Footer -->
+    <footer>
+        <div class="footerarea">
+            <h3>We are social</h3>
+            <div class="socialIcons">
+                <a href="#"><span class="icon-container"><i class="fa-brands fa-facebook-f"></i></span></a>
+                <a href="#"><span class="icon-container"><i class="fa-brands fa-x"></i></span></a>
+                <a href="#"><span class="icon-container"><i class="fa-brands fa-instagram"></i></span></a>
+                <a href="#"><span class="icon-container"><i class="fa-brands fa-youtube"></i></span></a>
             </div>
+        </div>
+        <p>&copy; 2024 Imomotimi Foundation. All Rights Reserved. <a href="#">swiftBrawn</a></p>
+        <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
 
-        </footer>
-    </section>
-    
-    <script src="./js/jquery-3.7.1.mini.js"></script>
-    <script src="/Assets/owlcarrousel/owl.carousel.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+
     <script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-        loop:true,
-        margin:0,
-        nav:false,
-        autoplay:true,
-        autoTimeout:2000,
-        autoplayHoverpause:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            },
-        }
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    },
+                }
+            });
         });
-    });
     </script>
-    
 </body>
 
 </html>
