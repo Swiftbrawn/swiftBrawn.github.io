@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* Layout and Structure */
+        .flex-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #2f393b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-subtitle {
+            font-size: 18px;
+            letter-spacing: 2px;
+            padding: 20px 0;
+        }
+
+        .header-title {
+            font-size: 36px;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+
+        .header-badge {
+            margin-top: 15px;
+            padding: 5px 10px;
+            border: 2px solid white;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        /* Main Section */
+        .main {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .main_sidebar {
+            width: 34%;
+            background-color: #ebecec;
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+
+        .main_content {
+            width: 66%;
+            background-color: white;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Sidebar Image */
+        .mainshot-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url("http://nextltda.com/sonidoprimordial/wp-content/uploads/2017/05/original-560x416.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Content Block */
+        .block-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .block-wrapper:before {
+            content: attr(title);
+            display: block;
+            padding-bottom: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #d8d8d8;
+            margin-bottom: 10px;
+        }
+
+        .grid-wrapper {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #d8d8d8;
+        }
+
+        .grid-name {
+            width: 120px;
+            font-weight: 600;
+        }
+
+        .grid-content {
+            flex-grow: 1;
+            color: #777;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-icon .icon-wrap {
+            width: 30px;
+            height: 30px;
+            background-color: #555;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .contact-website {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #2f393b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .main_sidebar, .main_content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-wrapper">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-subtitle">THE LEGENDARY</div>
+        <div class="header-title">IDRIS TIJANI</div>
+        <div class="header-badge">CREATIVE DIRECTOR</div>
+    </header>
+
+    <div class="main">
+        <!-- Sidebar with Personal & Contact Info -->
+        <div class="main_sidebar">
+            <div class="mainshot-wrapper">
+                <div class="img"></div>
+            </div>
+            <div class="info-wrapper">
+                <!-- Personal Details Block -->
+                <div class="block-wrapper" title="PERSONAL">
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Name</div>
+                        <div class="grid-content">Idris Tijani</div>
+                    </div>
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Birthday</div>
+                        <div class="grid-content">September 10, 1995</div>
+                    </div>
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Relationship</div>
+                        <div class="grid-content">Engaged</div>
+                    </div>
+                </div>
+
+                <!-- Contact Info Block -->
+                <div class="block-wrapper" title="CONTACT">
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Phone</div>
+                        <div class="grid-content">08161791297</div>
+                    </div>
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Email</div>
+                        <div class="grid-content">tijaniidris124@yahoo.com</div>
+                    </div>
+                    <div class="grid-wrapper">
+                        <div class="grid-name">Location</div>
+                        <div class="grid-content">Lagos, Nigeria</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main_content">
+            <!-- Profile Block -->
+            <div class="block-wrapper" title="PROFILE">
+                <div class="content-box">I am a Professional Plumber by Vocation. | Petroleum Engineering by qualification. | Software Engineering Developer by Passion.</div>
+            </div>
+
+            <!-- Work Experience Block -->
+            <div class="block-wrapper" title="WORK">
+                <div class="year-list-wrapper">
+                    <div class="year-tag">2024</div>
+                    <div class="__title">Front-end Developer</div>
+                    <div class="__content">Designed by SwiftBrawn</div>
+                </div>
+                <!-- Repeat work experience as necessary -->
+            </div>
+
+            <!-- Education Block -->
+            <div class="block-wrapper" title="EDUCATION">
+                <div class="year-list-wrapper">
+                    <div class="year-tag">2024</div>
+                    <div class="__title">Abubakar Tafawa Balewa University, Bauchi</div>
+                    <div class="__content">Bachelor's in Petroleum Engineering Design</div>
+                </div>
+            </div>
+
+            <!-- Design Block -->
+            <div class="block-wrapper" title="DESIGN">
+                <!-- Design-related content -->
+            </div>
+
+            <!-- Hobbies Block -->
+            <div class="block-wrapper" title="HOBBIES">
+                <!-- Hobbies-related content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Idris Tijani | All Rights Reserved</p>
+    </footer>
+</div>
+
+</body>
+</html>
