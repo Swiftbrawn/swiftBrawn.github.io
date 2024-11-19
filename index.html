@@ -44,24 +44,41 @@
             border: 3px solid #6f42c1;
         }
 
-        .grid-item {
-            background-color: #6f42c1;
-            color: white;
-            padding: 20px;
+        .portfolio-grid .grid-item {
+            position: relative;
+            background-color: #f8f9fa;
+            border: 2px solid #6f42c1;
             border-radius: 8px;
+            overflow: hidden;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .grid-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        .portfolio-grid .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #6f42c1;
         }
 
-        .grid-item a {
+        .portfolio-grid .grid-item .content {
+            padding: 15px;
+        }
+
+        .portfolio-grid .grid-item .content a {
             text-decoration: none;
-            color: #ffc107;
+            color: #6f42c1;
             font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .portfolio-grid .grid-item .content a:hover {
+            color: #ffc107;
+        }
+
+        .portfolio-grid .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         footer {
@@ -105,20 +122,60 @@
 
         <!-- Portfolio Projects -->
         <h2 class="text-center my-4">My Projects</h2>
-        <div class="row g-4">
+        <div class="row portfolio-grid g-4">
+            <!-- Portfolio Items -->
             <div class="col-md-4">
                 <div class="grid-item">
-                    <a href="http://127.0.0.1:3000/OnePageWebsite/Assets/index.html" target="_blank">One Page Website</a>
+                    <img src="./OnePageWebsite/Assets/IMG/3.jpg" alt="One Page Website">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/OnePageWebsite/Assets/index.html" target="_blank">One Page Website</a>
+                        <p class="mt-2">A sleek and modern single-page layout for showcasing your dancing brand.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="grid-item">
-                    <a href="http://127.0.0.1:3000/IBMT/services.html" target="_blank">Multiple Page Website</a>
+                    <img src="./IBMT/img/ba4.jpg" alt="Multiple Page Website">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/IBMT/services.html" target="_blank">Multiple Page Website</a>
+                        <p class="mt-2">Designed for Plumbing businesses needing multiple pages for services and more.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="grid-item">
-                    <a href="http://127.0.0.1:3000/IBMT/abot.html" target="_blank">Web Developer Website</a>
+                    <img src="./IBMT/img/we.jpg" alt="Developer Portfolio">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/IBMT/abot.html" target="_blank">Developer Portfolio</a>
+                        <p class="mt-2">A portfolio to showcase your development projects and skills.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-item">
+                    <img src="./IBMT/img/book.jpg" alt="Booking Website">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/IBMT/booking.html" target="_blank">Booking Website</a>
+                        <p class="mt-2">A functional booking system for services or appointments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-item">
+                    <img src="./IBMT/img/profile.jpg" alt="Contact Website">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/IBMT/contact.html" target="_blank">Contact Profile Website</a>
+                        <p class="mt-2">A professional way to display your contact information online.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-item">
+                    <img src="./IBMT/img/techni.jpg" alt="Technician Website">
+                    <div class="content">
+                        <a href="http://127.0.0.1:3000/IBMT/team.html" target="_blank">Technician Website</a>
+                        <p class="mt-2">Designed for technical teams to highlight their skills and services.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,7 +183,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Idris Tijani | <a href="https:swiftBrawn.github.io" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/idris-opeyemi-tijani-062b241b8/" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2024 Idris Tijani | <a href="https://swiftBrawn.github.io" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/idris-opeyemi-tijani-062b241b8/" target="_blank">LinkedIn</a></p>
     </footer>
 
     <!-- Bootstrap JS -->

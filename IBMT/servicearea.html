@@ -8,7 +8,6 @@
     <!-- GSAP Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -32,6 +31,7 @@
             background: black;
             font-family: 'Cormorant Garamond', serif;
             text-transform: uppercase;
+            overflow: hidden;
         }
 
         header {
@@ -65,11 +65,11 @@
         }
 
         section {
-            height: 100%;
+            height: 100vh;
             width: 100%;
-            position: fixed;
-            visibility: hidden;
+            position: absolute;
             top: 0;
+            visibility: hidden;
         }
 
         .outer,
@@ -91,13 +91,13 @@
         }
 
         /* Background images for sections */
-        .first .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Mech1.jpg'); }
-        .second .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Commercial-Structural-3D.jpg'); }
-        .third .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/Plumbing-Website-Pic.jpg'); }
-        .fourth .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/hotel_guest_room_interior.jpg'); }
-        .fifth .bg { background-image: var(--bg-gradient), url('https://surturbeam.com/wp-content/uploads/2023/09/ecm50Banner.jpg'); }
-        .sixth .bg { background-image: var(--bg-gradient), url('https://example.com/real-estate.jpg'); }
-        .seventh .bg { background-image: var(--bg-gradient), url('https://example.com/civil-engineer.jpg'); }
+        .first .bg { background-image: var(--bg-gradient), url('./img/mech.jpg'); }
+        .second .bg { background-image: var(--bg-gradient), url('./img/Med.jpg'); }
+        .third .bg { background-image: var(--bg-gradient), url('../IBMT/img/ba4.jpg'); }
+        .fourth .bg { background-image: var(--bg-gradient), url('./img/elect.jpg'); }
+        .fifth .bg { background-image: var(--bg-gradient), url('./img/strut.jpg'); }
+        .sixth .bg { background-image: var(--bg-gradient), url('./img/re-est.jpg'); }
+        .seventh .bg { background-image: var(--bg-gradient), url('./img/civil.jpg'); }
     </style>
 </head>
 <body>
@@ -148,7 +148,7 @@
         <div class="outer">
             <div class="inner">
                 <div class="bg">
-                    <h2 class="section-heading">Structural</h2>
+                    <h2 class="section-heading">Structural Analysis</h2>
                 </div>
             </div>
         </div>
@@ -171,41 +171,40 @@
             </div>
         </div>
     </section>
-
-    <!-- GSAP Animation -->
     <script>
         gsap.registerPlugin(Observer);
-
+    
         const sections = document.querySelectorAll("section"),
               images = document.querySelectorAll(".bg"),
               headings = gsap.utils.toArray(".section-heading"),
               outerWrappers = gsap.utils.toArray(".outer"),
               innerWrappers = gsap.utils.toArray(".inner"),
               wrap = gsap.utils.wrap(0, sections.length);
-
+    
         let currentIndex = -1,
             animating = false;
-
+    
         gsap.set(outerWrappers, { yPercent: 100 });
         gsap.set(innerWrappers, { yPercent: -100 });
-
+    
+        // Function to transition to a section
         function gotoSection(index, direction) {
             if (animating) return;
             animating = true;
-
+    
             const fromTop = direction === -1,
                   dFactor = fromTop ? -1 : 1;
-
+    
             const tl = gsap.timeline({
                 defaults: { duration: 1.25, ease: "power1.inOut" },
                 onComplete: () => animating = false,
             });
-
+    
             if (currentIndex >= 0) {
                 tl.to(images[currentIndex], { yPercent: -15 * dFactor })
                   .set(sections[currentIndex], { autoAlpha: 0 });
             }
-
+    
             gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
             tl.fromTo([outerWrappers[index], innerWrappers[index]], {
                 yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
@@ -213,18 +212,25 @@
                 yPercent: 0,
             })
               .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 });
-
+    
             currentIndex = index;
         }
-
+    
+        // Observer for manual navigation
         Observer.create({
             type: "wheel,touch,pointer",
             wheelSpeed: -1,
             onDown: () => gotoSection(currentIndex - 1, -1),
             onUp: () => gotoSection(currentIndex + 1, 1),
         });
-
+    
+        // Initial section display
         gotoSection(0, 1);
+    
+        // Auto-slide every 45 seconds
+        setInterval(() => {
+            gotoSection(wrap(currentIndex + 1), 1);
+        }, 45000); // 45000ms = 45 seconds
     </script>
-</body>
+    </body>
 </html>
