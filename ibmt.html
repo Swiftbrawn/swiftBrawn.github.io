@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBMT Nigeria Limited</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./IBMT/ibmt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="./IBMT/img/ibmt-logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header" id="header">
+            <div class="indiri">
+                <p>Email us at: <strong>ibmtnigerialimited@gmail.com</strong></p>
+            </div>
+            <div class="phone">
+                <span><i class="fa-solid fa-phone"></i> 08161791297</span>
+            </div>
+        </div>
+        <div class="container">
+            <a href="#">
+                <img src="./IBMT/img/ibmt-logo.png" alt="IBMT Logo" width="105" height="90" class="logo" style="border-radius: 25px;">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="http://www.ibmt.ezyro.com/?i=1">About - IBMT</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="servicearea.html">Service Area</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="owl-carousel">
+                <div class="item"><img src="./IBMT/img/pexels-cottonbro-9374129.jpg" alt="Slide Image 1"></div>
+                <div class="item"><img src="./IBMT/img/pexels-curtis-adams-1694007-15667601.jpg" alt="Slide Image 2"></div>
+                <div class="item"><img src="./IBMT/img/pexels-heyho-11701126.jpg" alt="Slide Image 3"></div>
+                <!-- Add additional slides here -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About IBMT NIGERIA LIMITED</h2>
+                <p>At IBMT, we’re committed to providing outstanding plumbing and heating services across Africa and beyond. With years of expertise and a dedication to quality, we prioritize your comfort and safety.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>IBMT Professional Services</h2>
+                <ul>
+                    <!-- Example Service -->
+                    <li>
+                        <a href="services.html" style="text-decoration: none;">
+                            <img src="https://media.istockphoto.com/id/944254220/photo/plumber-at-work.jpg" alt="Toilet and Faucet Repair">
+                            <span>Toilet and Faucet Repair</span>
+                        </a>
+                    </li>
+                    <!-- Add more services here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonial">
+            <div class="container">
+                <div class="stars">★★★★★</div>
+                <p>"IBMT Nigeria Limited were fantastic! Highly recommend their services for any plumbing needs."</p>
+                <a href="#" class="review-button">See More 5 Star Reviews</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Our Team</h2>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                    <input type="text" placeholder="Address" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Submit Form</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 IBMT NIGERIA LIMITED. All rights reserved. Designed by <a href="https://swiftbrawn.github.io/" style="text-decoration: none; color: green;">swiftBrawn</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+     $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        loop: true,              // Enables continuous looping
+        margin: 10,             // Adds margin between items
+        nav: true,              // Displays navigation arrows
+        dots: true,             // Displays dots for navigation
+        autoplay: true,         // Enables automatic sliding
+        autoplayTimeout: 3000,  // Time in milliseconds between slides
+        autoplayHoverPause: true, // Pause autoplay on hover
+        responsive: {           // Configure items for different screen sizes
+            0: {
+                items: 1        // 1 item for screens 0px and up
+            },
+            600: {
+                items: 2        // 2 items for screens 600px and up
+            },
+            1000: {
+                items: 3        // 3 items for screens 1000px and up
+            }
+        }
+    });
+});
+
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const pageHeight = document.documentElement.offsetHeight;
+
+            if (scrollPosition >= pageHeight) {
+                header.classList.add('hidden'); // Hide header
+            } else {
+                header.classList.remove('hidden'); // Show header
+            }
+        });
+    </script>
+</body>
+</html>

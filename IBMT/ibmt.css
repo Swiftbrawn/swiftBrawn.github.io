@@ -44,6 +44,26 @@
     transition: background 0.3s;
 }
 
+.owl-carousel .item img {
+    width: 100%;  /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.owl-carousel .owl-nav button {
+    background: #333; /* Dark background for nav buttons */
+    color: #fff;      /* White color for arrows */
+    border: none;     /* Remove default border */
+    padding: 10px;    /* Add padding */
+    border-radius: 50%; /* Rounded nav buttons */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.owl-carousel .owl-nav button:hover {
+    background: #555; /* Lighter background on hover */
+}
+
+
 .cta-button:hover {
     background-color: #ff4500;
 }
