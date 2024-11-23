@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section h3 {
+            margin-bottom: 15px;
+        }
+        .declaration {
+            margin-top: 20px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="marital-status">Marital Status:</label>
+            <input type="text" id="marital-status" name="marital-status">
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality">
+
+            <label for="state-origin">State of Origin:</label>
+            <input type="text" id="state-origin" name="state-origin">
+
+            <label for="lga">Local Government Area (LGA):</label>
+            <input type="text" id="lga" name="lga">
+
+            <label for="address">Residential Address:</label>
+            <textarea id="address" name="address"></textarea>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="identification">Means of Identification:</label>
+            <input type="text" id="identification" name="identification" placeholder="e.g., National ID Card">
+
+            <label for="id-number">Identification Number:</label>
+            <input type="text" id="id-number" name="id-number">
+
+            <label for="next-of-kin">Next of Kin:</label>
+            <input type="text" id="next-of-kin" name="next-of-kin">
+
+            <label for="next-of-kin-contact">Next of Kin's Contact Information:</label>
+            <input type="tel" id="next-of-kin-contact" name="next-of-kin-contact">
+        </div>
+
+        <div class="form-section">
+            <h3>Educational Qualifications</h3>
+            <label for="qualification">Highest Qualification:</label>
+            <input type="text" id="qualification" name="qualification">
+
+            <label for="institution">Institution:</label>
+            <input type="text" id="institution" name="institution">
+
+            <label for="completion-year">Year of Completion:</label>
+            <input type="text" id="completion-year" name="completion-year">
+
+            <label for="certifications">Relevant Certifications or Licenses:</label>
+            <textarea id="certifications" name="certifications"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h3>Professional Experience</h3>
+            <label for="previous-employment">Previous Employment (If any):</label>
+            <textarea id="previous-employment" name="previous-employment" placeholder="Company Name, Position Held, Duration"></textarea>
+
+            <label for="skills">Relevant Skills and Experience:</label>
+            <textarea id="skills" name="skills"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h3>Guarantor Information</h3>
+            <h4>Guarantor 1</h4>
+            <label for="guarantor1-name">Full Name:</label>
+            <input type="text" id="guarantor1-name" name="guarantor1-name">
+
+            <label for="guarantor1-address">Address:</label>
+            <textarea id="guarantor1-address" name="guarantor1-address"></textarea>
+
+            <label for="guarantor1-phone">Phone Number:</label>
+            <input type="tel" id="guarantor1-phone" name="guarantor1-phone">
+
+            <label for="guarantor1-occupation">Occupation:</label>
+            <input type="text" id="guarantor1-occupation" name="guarantor1-occupation">
+
+            <label for="guarantor1-relationship">Relationship to Applicant:</label>
+            <input type="text" id="guarantor1-relationship" name="guarantor1-relationship">
+
+            <h4>Guarantor 2</h4>
+            <label for="guarantor2-name">Full Name:</label>
+            <input type="text" id="guarantor2-name" name="guarantor2-name">
+
+            <label for="guarantor2-address">Address:</label>
+            <textarea id="guarantor2-address" name="guarantor2-address"></textarea>
+
+            <label for="guarantor2-phone">Phone Number:</label>
+            <input type="tel" id="guarantor2-phone" name="guarantor2-phone">
+
+            <label for="guarantor2-occupation">Occupation:</label>
+            <input type="text" id="guarantor2-occupation" name="guarantor2-occupation">
+
+            <label for="guarantor2-relationship">Relationship to Applicant:</label>
+            <input type="text" id="guarantor2-relationship" name="guarantor2-relationship">
+        </div>
+
+        <div class="form-section declaration">
+            <h3>Declaration</h3>
+            <p>
+                I, the undersigned, hereby declare that the information provided above is true and accurate to the best of my knowledge. I understand that any false information provided may lead to disqualification.
+            </p>
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature">
+
+            <label for="declaration-date">Date:</label>
+            <input type="date" id="declaration-date" name="declaration-date">
+        </div>
+
+        <div class="form-section">
+            <h3>For Official Use Only</h3>
+            <label for="received-by">Received by:</label>
+            <input type="text" id="received-by" name="received-by">
+
+            <label for="decision">Decision:</label>
+            <input type="text" id="decision" name="decision">
+
+            <label for="official-signature">Signature:</label>
+            <input type="text" id="official-signature" name="official-signature">
+
+            <label for="official-date">Date:</label>
+            <input type="date" id="official-date" name="official-date">
+        </div>
+
+        <button class="btn-submit" type="submit">Submit</button>
+    </div>
+</body>
+</html>
